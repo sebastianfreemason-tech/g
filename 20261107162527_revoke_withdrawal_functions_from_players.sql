@@ -1,0 +1,2 @@
+REVOKE EXECUTE ON FUNCTION public.create_withdrawal(numeric, text, text, text) FROM PUBLIC, anon, authenticated;
+REVOKE EXECUTE ON FUNCTION public.get_withdrawal_eligibility() FROM PUBLIC, anon, authenticated;

@@ -1,0 +1,11 @@
+[functions.zos-auth]
+verify_jwt = false
+
+[functions.qpay-create-deposit]
+verify_jwt = true
+
+[functions.qpay-callback]
+verify_jwt = false
+
+[functions.qpay-verify-deposit]
+verify_jwt = true

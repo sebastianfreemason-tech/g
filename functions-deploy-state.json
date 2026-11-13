@@ -1,0 +1,21 @@
+{
+  "projectId": "72131573",
+  "functions": {
+    "qpay-callback": {
+      "hasChanged": false,
+      "hash": "0d3bd20bc1e6093099ba34c8fb23d07506cc1c890d292dd062bf865f7478e2274ae57a771e72f140506e40a7eef7d4d6153de65f61afd8319cb80ff71576ba9f"
+    },
+    "qpay-create-deposit": {
+      "hasChanged": false,
+      "hash": "30e5c9589ae16b968dd2105eca6497294a48f0c5182735133ddc05429e8981f14ae57a771e72f140506e40a7eef7d4d6153de65f61afd8319cb80ff71576ba9f"
+    },
+    "qpay-verify-deposit": {
+      "hasChanged": false,
+      "hash": "6070e04c65280554f0a589efe69fcc67f94af2e50cacfe4a8ec9b53b84e19f2b4ae57a771e72f140506e40a7eef7d4d6153de65f61afd8319cb80ff71576ba9f"
+    },
+    "zos-auth": {
+      "hasChanged": false,
+      "hash": "aaa6e9e3088663751b57d1fe3c6b3bc12ebcfd13e9764d88e95a662ee2a50f8c"
+    }
+  }
+}
