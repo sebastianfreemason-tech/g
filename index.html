@@ -12,5 +12,40 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/main.tsx"></script>
+
+    <script>
+      (() => {
+        function showError(title, detail) {
+          let panel = document.getElementById('zos-debug-panel');
+          if (!panel) {
+            panel = document.createElement('div');
+            panel.id = 'zos-debug-panel';
+            panel.style.cssText =
+              'position:fixed;inset:0;z-index:999999;background:#160b0b;color:#fff;padding:24px;overflow:auto;font:14px monospace;white-space:pre-wrap;';
+            document.body.appendChild(panel);
+          }
+          panel.textContent = title + '\n\n' + String(detail || 'No details available');
+        }
+
+        window.addEventListener('error', event => {
+          showError('ZOSBANK JAVASCRIPT ERROR', event.message + '\n' + (event.filename || '') + ':' + event.lineno);
+        });
+
+        window.addEventListener('unhandledrejection', event => {
+          showError('ZOSBANK PROMISE ERROR', event.reason?.stack || event.reason);
+        });
+
+        setTimeout(() => {
+          const root = document.getElementById('root');
+          if (root && !root.hasChildNodes() && !document.getElementById('zos-debug-panel')) {
+            showError(
+              'ZOSBANK DID NOT START',
+              'The app loaded, but React did not render anything within 15 seconds.\n\nURL: ' + location.href
+            );
+          }
+        }, 15000);
+      })();
+    </script>
+
   </body>
 </html>
