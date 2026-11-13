@@ -1,4 +1,4 @@
-package Zosvirtual.com;
+package com.zosvirtual.zosbank;
 
 import com.getcapacitor.BridgeActivity;
 
